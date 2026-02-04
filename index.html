@@ -1,0 +1,178 @@
+"<!DOCTYPE html>
+<html lang=""zh-TW"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>幸福緣手作概念館 - 側邊滑動版</title>
+    <style>
+        /* 基礎樣式設定 */
+        body { 
+            font-family: 'Noto Sans CJK TC', sans-serif; 
+            margin: 0; 
+            background-color: #1a1a1a; /* 深色背景更顯現代感 */
+            color: #fff; 
+            overflow-x: hidden;
+        }
+        
+        /* 品牌頭部 */
+        header { 
+            padding: 40px 20px; 
+            background: linear-gradient(to bottom, #d68a5a, #1a1a1a); 
+            text-align: left;
+        }
+        header h1 { font-size: 2.2em; margin: 0; letter-spacing: 2px; }
+        header p { font-size: 1em; opacity: 0.8; margin-top: 5px; }
+
+        /* 滑動區塊設定 */
+        .scroll-section { padding: 30px 0 10px 0; }
+        .scroll-section h2 { 
+            margin-left: 20px; 
+            color: #e0b090; 
+            font-size: 1.4em; 
+            border-left: 4px solid #d68a5a;
+            padding-left: 10px;
+        }
+
+        /* 核心滑動容器 */
+        .scroll-wrapper { 
+            display: flex; 
+            overflow-x: auto; 
+            padding: 10px 20px 30px 20px; 
+            gap: 20px; 
+            scroll-snap-type: x mandatory; /* 自動吸附功能 */
+            -webkit-overflow-scrolling: touch; /* 流暢滾動 */
+        }
+        .scroll-wrapper::-webkit-scrollbar { display: none; } /* 隱藏醜陋的捲軸 */
+
+        /* 影音卡片樣式 */
+        .card { 
+            min-width: 260px; 
+            height: 380px; 
+            background: #2a2a2a; 
+            border-radius: 20px; 
+            flex-shrink: 0; 
+            scroll-snap-align: start; 
+            overflow: hidden; 
+            position: relative; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+        .card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+        .card-info { 
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+        }
+        .card-info h3 { margin: 0; font-size: 1.2em; color: #e0b090; }
+        .card-info p { margin: 5px 0 0; font-size: 0.85em; color: #ccc; }
+
+        /* 實踐工房/智多星區塊 */
+        #workshop { 
+            padding: 50px 20px; 
+            background: #222; 
+            margin: 20px 0 0 0; 
+            border-radius: 30px 30px 0 0;
+            text-align: center;
+        }
+        .smart-mastermind-box {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px dashed #d68a5a;
+        }
+        .smart-mastermind-box input { 
+            width: 85%; 
+            padding: 15px; 
+            border-radius: 30px; 
+            border: none; 
+            margin-top: 15px; 
+            font-size: 1em;
+            background: #333;
+            color: #fff;
+        }
+        .smart-mastermind-box button { 
+            background: #d68a5a; 
+            color: white; 
+            padding: 12px 35px; 
+            border-radius: 30px; 
+            border: none; 
+            margin-top: 15px; 
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer { padding: 40px; text-align: center; color: #555; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>幸福緣手作概念館</h1>
+        <p>探索您的手作幸福靈感</p>
+    </header>
+
+    <div class=""scroll-section"">
+        <h2>幸福感悟 & 剪影</h2>
+        <div class=""scroll-wrapper"">
+            <div class=""card"">
+                <img src=""https://via.placeholder.com/300x500/d68a5a/fff?text=療癒感悟"" alt=""幸福感悟"">
+                <div class=""card-info"">
+                    <h3>揉捏平靜</h3>
+                    <p>心靈短影音系列</p>
+                </div>
+            </div>
+            <div class=""card"">
+                <img src=""https://via.placeholder.com/300x500/e0b090/fff?text=親子早餐"" alt=""親子早餐"">
+                <div class=""card-info"">
+                    <h3>晨光溫度</h3>
+                    <p>親子早餐短影音</p>
+                </div>
+            </div>
+            <div class=""card"">
+                <img src=""https://via.placeholder.com/300x500/c09f80/fff?text=手作瞬間"" alt=""生活剪影"">
+                <div class=""card-info"">
+                    <h3>幸福瞬間</h3>
+                    <p>生活碎片紀錄</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=""scroll-section"">
+        <h2>烘焙科學</h2>
+        <div class=""scroll-wrapper"">
+            <div class=""card"">
+                <img src=""https://via.placeholder.com/300x500/444/fff?text=不漲氣秘密"" alt=""烘焙科學"">
+                <div class=""card-info"">
+                    <h3>發酵科學</h3>
+                    <p>解決麵包漲氣煩惱</p>
+                </div>
+            </div>
+            <div class=""card"">
+                <img src=""https://via.placeholder.com/300x500/555/fff?text=減糖配方"" alt=""減糖科學"">
+                <div class=""card-info"">
+                    <h3>甜蜜無負擔</h3>
+                    <p>低醣烘焙研究室</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id=""workshop"">
+        <div class=""smart-mastermind-box"">
+            <h2 style=""margin:0; border:none; padding:0; color:#d68a5a;"">幸福智多星</h2>
+            <p style=""color:#888;"">遇到烘焙難題？輸入問題為您匹配對策</p>
+            <input type=""text"" placeholder=""例如：麵包為什麼會漲氣？"">
+            <br>
+            <button>尋找對策</button>
+        </div>
+    </section>
+
+    <footer>
+        幸福緣手作概念館 © 2026 | 全球首創影音協作 PWA
+    </footer>
+</body>
+</html>
+"
